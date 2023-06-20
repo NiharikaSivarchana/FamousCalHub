@@ -1,0 +1,34 @@
+<html lang="en" dir="ltr">
+    <head>
+        <title>Gigi</title>
+        <link rel="stylesheet" href="gigi.css">
+    </head>
+    <body>
+        <div class="slider">
+        <div class="load">
+        </div>
+        <div class="content">
+            <div class="principal">
+                <button onclick="typeWriter()"><h1>GIGI HADID</h1></button>
+                <p id="demo"></p>
+
+<script>
+var i = 0;
+var txt = 'Jelena Noura "Gigi" Hadid (born April 23, 1995) is an American model and television personality. In November 2014, she made her debut in the Top 50 Models ranking at Models.com.she was named International Model of the Year by the British Fashion Council.Over the span of four years, Hadid has made thirty-five appearances on international Vogue magazine covers';
+var speed = 50;
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+</script>
+
+            </div>
+        </div>
+        </div>
+    </body>
+</html>
+        

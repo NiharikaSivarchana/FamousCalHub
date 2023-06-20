@@ -1,0 +1,109 @@
+<html>
+    <head>
+        <title>calculator</title>
+        <style>
+            td{
+                text-align:center;
+            }
+            body{
+                background-color:aquamarine;
+            }
+            table{
+                background-color:grey;
+                border-width:10px;
+                border-style: solid;
+                border-color: black;
+                width:40%;
+                height:70%
+                
+            }
+            button{
+                width:80%;
+                height:80%;
+                text-align: center;
+                font-size: x-large;
+                font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                cursor: pointer;
+                color:white;
+                background-color:rgb(147, 108, 219);
+                border-color: rgb(112, 119, 209);
+                border-radius: 10px;
+            }
+            #result
+            {
+                width:90%;
+                height:90%;
+                background-color:greenyellow;
+                
+                
+            }
+            #spe{
+                background-color: red;
+                border-color: red;
+            }
+        </style>
+        <script>
+           function ac()
+           {
+            document.getElementById('result').value=" ";
+           }
+           function show(input)
+           {
+            document.getElementById('result').value+=input;    //a=a+1,a+=1  here 1 is input by the user
+           }
+           function cal()
+           {
+                try{
+                    var out=eval(document.getElementById('result').value);
+                   document.getElementById('result').value=out;
+                }
+                catch(err)
+                {
+                    alert("invalid")
+                }               
+           }
+           function del()
+           {
+            document.getElementById('result').value=document.getElementById('result').value.slice(0,-1);
+           }
+           
+        </script>
+    </head>
+
+    <body>
+        <table border="2" align="center"  id="table">
+            
+            <caption><h1 style="color:red">SIMPLE CALCULATOR</h1></caption>
+            
+            <tr>
+                <td colspan="3"><input type="text" id="result" style="font-size:x-large" ></td>
+                <td ><button onclick="ac()" id="spe"> AC </button></td>
+                <td ><button onclick="del()" id="spe">DEL</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="show('1')">1</button></td>
+                <td><button onclick="show('2')">2</button></td>
+                <td><button onclick="show('3')">3</button></td>
+                <td colspan="2"><button onclick="show('+')">+</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="show('4')">4</button></td>
+                <td><button onclick="show('5')">5</button></td>
+                <td><button onclick="show('6')">6</button></td>
+                <td colspan="2"><button onclick="show('-')">-</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="show('7')">7</button></td>
+                <td><button onclick="show('8')">8</button></td>
+                <td><button onclick="show('9')">9</button></td>
+                <td colspan="2"><button onclick="show('*')">*</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="show('0')">0</button></td>
+                <td><button onclick="show('/')">/</button></td>
+                <td><button onclick="show('%')">%</button></td>
+                <td colspan="2"><button onclick="cal()">=</button></td>
+            </tr>
+        </table>
+    </body>
+</html>

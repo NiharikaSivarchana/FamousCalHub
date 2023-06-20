@@ -1,0 +1,52 @@
+/*box model,flexbox,animations,positions  -- food ordering wesite*/
+body{
+    background-color: rgb(135, 243, 193);
+}
+h1{
+    color:red;
+    text-align: center;
+}
+.second{
+    color:purple
+}
+.third{
+    color: blue;
+}
+.card{
+    border:5px solid;
+    border-color:lightseagreen;
+    width: 300px;
+    margin: 80px;
+    padding: 20px;
+    border-radius: 10px;
+}
+.card img
+{
+    width:100%;
+    border-radius: 10px;
+    
+}
+.button
+{
+    background-color: black;
+    border-radius: 20px;
+    color:white;
+    padding:10px;
+    border:none;
+    text-align: center;
+    
+}
+.flex{
+    display:flex;
+    flex-wrap:wrap;
+
+}
+.card:hover{
+    animation-duration: 10s;
+    background:whitesmoke;
+    border-radius:18px;
+}
+.main
+{
+    color:blue;
+}
